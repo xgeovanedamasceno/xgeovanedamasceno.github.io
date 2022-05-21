@@ -2,7 +2,7 @@
 
 ## 1. ESLint rules
 
-**- Prop 'post' requires default value to be set.**
+**- 1. Prop 'post' requires default value to be set.**
 
 before:
 
@@ -31,6 +31,14 @@ export default {
 }
 </script>
 ```
+
+**- 2. Component name "default" should always be multi-word.**
+
+before: the name of the component was: `layouts/default.vue`
+
+after: `default-layout.vue`
+
+This rule want to prevent conflicts with existing and future HTML elements, since all HTML elements are a single word.
 
 ## Build Setup
 
