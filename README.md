@@ -1,5 +1,37 @@
 # xgeovanedamasceno.github.io
 
+## 1. ESLint rules
+
+**- Prop 'post' requires default value to be set.**
+
+before:
+
+```
+/* components/PostPreview */
+
+export default {
+    props: {
+        post: Object,
+    }
+}
+</script>
+```
+
+after:
+
+```
+/* components/PostPreview */
+export default {
+    props: {
+        post: {
+            type: Object,
+            required: true
+        }
+    }
+}
+</script>
+```
+
 ## Build Setup
 
 ```bash
