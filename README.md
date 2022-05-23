@@ -1,5 +1,45 @@
 # xgeovanedamasceno.github.io
 
+## 1. ESLint rules
+
+**- 1. Prop 'post' requires default value to be set.**
+
+before:
+
+```
+/* components/PostPreview */
+
+export default {
+    props: {
+        post: Object,
+    }
+}
+</script>
+```
+
+after:
+
+```
+/* components/PostPreview */
+export default {
+    props: {
+        post: {
+            type: Object,
+            required: true
+        }
+    }
+}
+</script>
+```
+
+**- 2. Component name "default" should always be multi-word.**
+
+before: the name of the component was: `layouts/default.vue`
+
+after: `default-layout.vue`
+
+This rule want to prevent conflicts with existing and future HTML elements, since all HTML elements are a single word.
+
 ## Build Setup
 
 ```bash
