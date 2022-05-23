@@ -18,8 +18,6 @@ export default Vue.extend({
       .sortBy('createdAt', 'desc')
       .fetch()
 
-      console.log("posts", posts)
-
       return {
         posts,
       }
